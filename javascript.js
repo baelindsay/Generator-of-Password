@@ -104,7 +104,7 @@ function generatePassword() {
         var confirmLowerCase;
         var confirmNumerals;
         var confirmSpecial;
-        
+
     //if statement for when user has chosen between 8 and 128
     if (passwordLength >=8 || passwordLength <= 128) {
 
@@ -114,25 +114,57 @@ function generatePassword() {
         var confirmLowerCase = confirm("Would you like to use lowercase letters in your password?");
         var confirmNumerals = confirm("Would you like to use numbers in your password?");
         var confirmSpecial = confirm("Would you like to use special characters in your password?");
+        }
   
-      }
-  
-    //while statement for if user has chosen cancel/no for all options
+      //while statement for if user has chosen cancel/no for all options
       while (confirmUpperCase === false && confirmLowerCase === false && confirmNumerals === false && confirmSpecial === false) {
   
         alert("Look, you need to decide at least one type of character.");
-  
+
         var confirmUpperCase = confirm("Would you like to use uppercase letters in your password?");
         var confirmLowerCase = confirm("Would you like to use lowercase letters in your password?");
         var confirmNumerals = confirm("Would you like to use numbers in your password?");
         var confirmSpecial = confirm("Would you like to use special characters in your password?");
-      }
+        }
+
+    var passwordInput = []
+
+        if (confirmUpperCase) {
+        passwordInput = passwordInput.concat(upperCasedCharacters);
+        }
+
+        if (confirmLowerCase) {
+        passwordInput = passwordInput.concat(lowerCasedCharacters);
+        }
+
+        if (confirmNumerals) {
+        passwordInput = passwordInput.concat(numericCharacters);
+        }
+
+        if (confirmSpecial) {
+        passwordInput = passwordInput.concat(specialCharacters);
+        }
+
+      // logs data users reply - total concatination of data logged √
+      console.log(passwordInput)
+
+      // setting a new variable for users password
+      var newPassword = " "
+
+        for (i=0; i < passwordLength; i++) {
+          newPassword = newPassword + passwordInput[Math.floor(Math.random() * passwordInput.length)];
+          console.log(newPassword);
+        }
+
+    return newPassword;
+
 }
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+function printPassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -141,4 +173,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", printPassword);
