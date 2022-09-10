@@ -98,6 +98,35 @@ function generatePassword() {
         window.alert("You must choose a password between 8 and 128 characters!");
         var passwordLength = window.prompt("Choose a a password between 8 and 128 characters.");
     }
+
+    //list of confirmed variables
+        var confirmUpperCase;
+        var confirmLowerCase;
+        var confirmNumerals;
+        var confirmSpecial;
+        
+    //if statement for when user has chosen between 8 and 128
+    if (passwordLength >=8 || passwordLength <= 128) {
+
+        alert("You picked " + passwordLength + " characters.");
+  
+        var confirmUpperCase = confirm("Would you like to use uppercase letters in your password?");
+        var confirmLowerCase = confirm("Would you like to use lowercase letters in your password?");
+        var confirmNumerals = confirm("Would you like to use numbers in your password?");
+        var confirmSpecial = confirm("Would you like to use special characters in your password?");
+  
+      }
+  
+    //while statement for if user has chosen cancel/no for all options
+      while (confirmUpperCase === false && confirmLowerCase === false && confirmNumerals === false && confirmSpecial === false) {
+  
+        alert("Look, you need to decide at least one type of character.");
+  
+        var confirmUpperCase = confirm("Would you like to use uppercase letters in your password?");
+        var confirmLowerCase = confirm("Would you like to use lowercase letters in your password?");
+        var confirmNumerals = confirm("Would you like to use numbers in your password?");
+        var confirmSpecial = confirm("Would you like to use special characters in your password?");
+      }
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
