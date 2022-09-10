@@ -4,7 +4,8 @@ Coding Bootcamp Third Module Challenge: Creating a password generator with JavaS
 # Description
 For this project I have implemented the window prompt function to ask the user 5 questions to determine the users preference. 
 
-# Deployed Application
-
+# Deployed Application Page
+https://baelindsay.github.io/Generator-of-Password/
 
 # Project GIF
+Add this ![ Alt text](images/generatorPassword.gif) / ! [](images/generatorPassword.gif)
