@@ -88,8 +88,17 @@ var upperCasedCharacters = [
     'Z'
 ]
 
-
-
+// Start of generate password function- asks user questions through window prompt 
+function generatePassword() {
+    var passwordLength = window.prompt("How long would you like your password to be? Choose number from 8-128.", 8);
+  
+      // Using the while loop to execute this code repeatedly based on the given Boolean condition
+      while (passwordLength < 8 || passwordLength > 128) {
+        // If user has chosen invalid password length an alert will pop up 
+        window.alert("You must choose a password between 8 and 128 characters!");
+        var passwordLength = window.prompt("Choose a a password between 8 and 128 characters.");
+    }
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
