@@ -8,4 +8,4 @@ For this project I have implemented the window prompt function to ask the user 5
 https://baelindsay.github.io/Generator-of-Password/
 
 # Project GIF
-Add this ![ Alt text](images/generatorPassword.gif) / ! [](images/generatorPassword.gif)
+![ Alt text](images/generatorPassword.gif) / ! [](images/generatorPassword.gif)
